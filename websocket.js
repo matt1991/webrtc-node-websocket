@@ -40,6 +40,7 @@ module.exports = function(context){
                 userMap[message.uid] = ws;
                 ws.uid = message.uid;
                 ws.send(JSON.stringify({
+                    register:"register",
                     clientId:message.uid
                 }));
                 return;
