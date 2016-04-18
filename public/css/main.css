@@ -66,11 +66,11 @@ div.warning {
 
 #videos {
   font-size: 0; /* to fix whitespace/scrollbars problem */
-  height: 80%;
+  height: 40%;
   pointer-events: none;
   position: absolute;
   transition: all 1s;
-  width: 80%;
+  width: 40%;
   z-index: 100;
 }
 
