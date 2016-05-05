@@ -13,6 +13,8 @@ module.exports = function(context){
     var ROOM_TYPE_TUTORIAL = "RoomType.TUTORIAL";
     var ROOM_TYPE_LIVE = "RoomType.LIVE";
 
+    
+
 
     //auth
 
@@ -45,7 +47,6 @@ module.exports = function(context){
                 }));
                 return;
             };
-
             if (message.to) {
                 console.log("resend message");
                 sendHandler(this, message);
