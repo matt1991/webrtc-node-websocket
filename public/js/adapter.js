@@ -141,6 +141,9 @@ var chromeShim = {
             return this._srcObject;
           },
           set: function(stream) {
+            if (!stream) {
+              return;
+            };
             // Use _srcObject as a private property for this shim
             this._srcObject = stream;
             if (this.src) {
