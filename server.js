@@ -11,7 +11,47 @@ var sslOptions = {
 	cert: fs.readFileSync('config/cert.pem')
 };	
 
+var crypto = require('crypto');
+
 app.use(express.static(__dirname + '/public'));
+
+
+var hmac = function(key, content) {
+	var method = crypto.createHmac('sha1', key);
+	method.setEncoding('base64');
+	method.write(content);
+	method.end();
+	return method.read();
+}
+
+
+app.get('/turn', function(req, resp) {
+	var query = req.query;
+	var key = '4080218913';
+	if (!query['username']) {
+	    return resp.send({'error':'AppError', 'message':'Must provide username.'});
+	} else {
+	    var time_to_live = 600;
+	    var timestamp = Math.floor(Date.now() / 1000) + time_to_live;
+	    var turn_username = timestamp + ':' + query['username'];
+	    var password = hmac(key, turn_username);
+
+	    return resp.send({
+	        username:turn_username,
+	        password:password,
+	        ttl:time_to_live,
+	        "uris": [
+	            "turn:192.168.42.1:3478?transport=udp",
+	            "turn:192.168.42.1:3478?transport=tcp",
+	            "turn:192.168.42.1:3479?transport=udp",
+	            "turn:192.168.42.1:3479?transport=tcp"
+	            ]
+	    });
+	}
+});
+
+
+
 //http
 // var server = http.createServer(app);
 // server.listen(8080);
