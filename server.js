@@ -41,10 +41,10 @@ app.get('/turn', function(req, resp) {
 	        password:password,
 	        ttl:time_to_live,
 	        "uris": [
-	            "turn:192.168.42.1:3478?transport=udp",
-	            "turn:192.168.42.1:3478?transport=tcp",
-	            "turn:192.168.42.1:3479?transport=udp",
-	            "turn:192.168.42.1:3479?transport=tcp"
+	          104.236.154.197:3478?transport=udp",
+	          104.236.154.197:3478?transport=tcp",
+	          104.236.154.197:3479?transport=udp",
+	          104.236.154.197:3479?transport=tcp"
 	            ]
 	    });
 	}
