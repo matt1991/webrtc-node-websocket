@@ -57,11 +57,15 @@ module.exports = function(context){
 
     //event handler
     var sendHandler = function(ws, message) {
-        wss.clients.forEach(function each(client) {
-            if (client.uid == message.to) {
-                client.send(JSON.stringify(message));
-            };
-        });
+        if (wss.clients) {
+
+
+            wss.clients.forEach(function each(client) {
+                if (client.uid == message.to) {
+                    client.send(JSON.stringify(message));
+                };
+            });
+        }
     }
 
     var inviteHandler = function(ws, message) {
