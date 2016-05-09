@@ -62,7 +62,13 @@ module.exports = function(context){
 
             wss.clients.forEach(function each(client) {
                 if (client.uid == message.to) {
-                    client.send(JSON.stringify(message));
+                    try{
+                        console.log("try ")
+                        console.log(client.readyState);
+                        client.send(JSON.stringify(message));
+                    } catch(e) {
+                        console.log(e);
+                    }
                 };
             });
         }
