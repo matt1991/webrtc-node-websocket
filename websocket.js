@@ -65,7 +65,9 @@ module.exports = function(context){
                     try{
                         console.log("try ")
                         console.log(client.readyState);
-                        client.send(JSON.stringify(message));
+                        client.send(JSON.stringify(message),{}, function(){
+                            console.log("message sended");
+                        });
                     } catch(e) {
                         console.log(e);
                     }
