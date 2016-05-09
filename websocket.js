@@ -28,7 +28,7 @@ module.exports = function(context){
 
 
         ws.on('message', function(message, flag) {
-            console.log("*******");
+            console.log("From "+ message.from + " to " + message.to);
             console.log("received Message ", message);
 
             var message = JSON.parse(message);
@@ -48,7 +48,6 @@ module.exports = function(context){
                 return;
             };
             if (message.to) {
-                console.log("resend message");
                 sendHandler(this, message);
             };
         });
@@ -63,8 +62,7 @@ module.exports = function(context){
             wss.clients.forEach(function each(client) {
                 if (client.uid == message.to) {
                     try{
-                        console.log("try ")
-                        console.log(client.readyState);
+                        console.log("sending message");
                         client.send(JSON.stringify(message),{}, function(){
                             console.log("message sended");
                         });
