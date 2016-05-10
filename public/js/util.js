@@ -123,7 +123,7 @@ function requestIceServers(iceServerRequestUrl, iceTransports) {
         filterIceServersUrls(iceServerRequestResponse, iceTransports);
       }
       trace('Retrieved ICE server information.');
-      resolve(iceServerRequestResponse);
+      resolve(iceServerRequestResponse.iceServers);
     }).catch(function(error) {
       reject(Error('ICE server request error: ' + error.message));
       return;
