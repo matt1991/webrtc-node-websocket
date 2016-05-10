@@ -64,6 +64,45 @@ app.get('/turn', function(req, resp) {
 	}
 });
 
+app.get('/mobileturn', function(req, resp) {
+
+
+	var query = req.query;
+	var key = '4080218913';
+	if (!query['username']) {
+	    return resp.send({'error':'AppError', 'message':'Must provide username.'});
+	} else {
+	    var time_to_live = 600;
+	    var timestamp = Math.floor(Date.now() / 1000) + time_to_live;
+	    var turn_username = timestamp + ':' + query['username'];
+	    var password = hmac(key, turn_username);
+
+	    return resp.send({
+			iceServers:[
+				{
+		    	    username:turn_username,
+		        	password:password,
+		        	ttl:time_to_live,
+		        	uris: [
+			           "turn:104.236.154.197:3478?transport=udp",
+			           "turn:104.236.154.197:3478?transport=tcp",
+			           "turn:104.236.154.197:3479?transport=udp",
+			           "turn:104.236.154.197:3479?transport=tcp"
+		            ]
+		   		},
+				{
+					
+      				urls: [
+       					 "stun:stun.l.google.com:19302"
+      				]
+    
+				}
+			]
+
+		});
+	}
+});
+
 
 
 //http
