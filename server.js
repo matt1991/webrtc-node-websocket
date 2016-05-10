@@ -32,7 +32,7 @@ app.get('/turn', function(req, resp) {
         path:     '/v1alpha/iceconfig?key=AIzaSyAJdh2HkajseEIltlZ3SIXO02Tze9sO3NY', // 目标路径
         method:   req.method // 请求方式
     }, function(sres){
-        sres.pipe(res);
+        sres.pipe(resp);
         sres.on('end', function(){
             console.log('done');
         });
