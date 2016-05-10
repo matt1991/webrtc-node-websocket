@@ -26,41 +26,58 @@ var hmac = function(key, content) {
 
 
 app.get('/turn', function(req, resp) {
-console.log("request turn server");	
-var query = req.query;
-	var key = '4080218913';
-	if (!query['username']) {
-	    return resp.send({'error':'AppError', 'message':'Must provide username.'});
-	} else {
-	    var time_to_live = 600;
-	    var timestamp = Math.floor(Date.now() / 1000) + time_to_live;
-	    var turn_username = timestamp + ':' + query['username'];
-	    var password = hmac(key, turn_username);
 
-	    return resp.send({
-			iceServers:[
-				{
-		    	    username:turn_username,
-		        	password:password,
-		        	ttl:time_to_live,
-		        	urls: [
-			           "turn:104.236.154.197:3478?transport=udp",
-			           "turn:104.236.154.197:3478?transport=tcp",
-			           "turn:104.236.154.197:3479?transport=udp",
-			           "turn:104.236.154.197:3479?transport=tcp"
-		            ]
-		   		},
-				{
+	var sreq = https.request({
+        host:     'networktraversal.googleapis.com', // 目标主机
+        path:     '/v1alpha/iceconfig?key=AIzaSyAJdh2HkajseEIltlZ3SIXO02Tze9sO3NY', // 目标路径
+        method:   req.method // 请求方式
+    }, function(sres){
+        sres.pipe(res);
+        sres.on('end', function(){
+            console.log('done');
+        });
+    });
+    if (/POST|PUT/i.test(req.method)) {
+        resp.pipe(sreq);
+    } else {
+        sreq.end();
+    }
+
+
+	// var query = req.query;
+	// var key = '4080218913';
+	// if (!query['username']) {
+	//     return resp.send({'error':'AppError', 'message':'Must provide username.'});
+	// } else {
+	//     var time_to_live = 600;
+	//     var timestamp = Math.floor(Date.now() / 1000) + time_to_live;
+	//     var turn_username = timestamp + ':' + query['username'];
+	//     var password = hmac(key, turn_username);
+
+	//     return resp.send({
+	// 		iceServers:[
+	// 			{
+	// 	    	    username:turn_username,
+	// 	        	password:password,
+	// 	        	ttl:time_to_live,
+	// 	        	urls: [
+	// 		           "turn:104.236.154.197:3478?transport=udp",
+	// 		           "turn:104.236.154.197:3478?transport=tcp",
+	// 		           "turn:104.236.154.197:3479?transport=udp",
+	// 		           "turn:104.236.154.197:3479?transport=tcp"
+	// 	            ]
+	// 	   		},
+	// 			{
 					
-      				urls: [
-       					 "stun:stun.l.google.com:19302"
-      				]
+ //      				urls: [
+ //       					 "stun:stun.l.google.com:19302"
+ //      				]
     
-				}
-			]
+	// 			}
+	// 		]
 
-		});
-	}
+	// 	});
+	// }
 });
 
 
