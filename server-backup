@@ -26,8 +26,7 @@ var hmac = function(key, content) {
 
 
 app.get('/turn', function(req, resp) {
-console.log("request turn server");	
-var query = req.query;
+	var query = req.query;
 	var key = '4080218913';
 	if (!query['username']) {
 	    return resp.send({'error':'AppError', 'message':'Must provide username.'});
@@ -42,10 +41,10 @@ var query = req.query;
 	        password:password,
 	        ttl:time_to_live,
 	        "uris": [
-	          "192.236.154.197:3478?transport=udp",
-	          "192.236.154.197:3478?transport=tcp",
-	          "192.236.154.197:3479?transport=udp",
-	          "192.236.154.197:3479?transport=tcp"
+	          "104.236.154.197:3478?transport=udp",
+	          "104.236.154.197:3478?transport=tcp",
+	          "104.236.154.197:3479?transport=udp",
+	          "104.236.154.197:3479?transport=tcp"
 	            ]
 	    });
 	}
