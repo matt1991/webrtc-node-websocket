@@ -42,7 +42,7 @@ app.get('/turn', function(req, resp) {
 			iceServers:[
 				{
 		    	    username:turn_username,
-		        	password:password,
+		        	credential:password,
 		        	ttl:time_to_live,
 		        	urls: [
 			           "turn:104.236.154.197:3478?transport=udp",
