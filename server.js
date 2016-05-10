@@ -38,16 +38,28 @@ var query = req.query;
 	    var password = hmac(key, turn_username);
 
 	    return resp.send({
-	        username:turn_username,
-	        password:password,
-	        ttl:time_to_live,
-	        "urls": [
-	          "turn:104.236.154.197:3478?transport=udp",
-	          "turn:104.236.154.197:3478?transport=tcp",
-	          "turn:104.236.154.197:3479?transport=udp",
-	          "turn:104.236.154.197:3479?transport=tcp"
-	            ]
-	    });
+			iceServers:[
+				{
+		    	    username:turn_username,
+		        	password:password,
+		        	ttl:time_to_live,
+		        	urls: [
+			           "turn:104.236.154.197:3478?transport=udp",
+			           "turn:104.236.154.197:3478?transport=tcp",
+			           "turn:104.236.154.197:3479?transport=udp",
+			           "turn:104.236.154.197:3479?transport=tcp"
+		            ]
+		   		},
+				{
+					
+      				urls: [
+       					 "stun:stun.l.google.com:19302"
+      				]
+    
+				}
+			]
+
+		});
 	}
 });
 
