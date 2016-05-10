@@ -41,7 +41,7 @@ var query = req.query;
 	        username:turn_username,
 	        password:password,
 	        ttl:time_to_live,
-	        "uris": [
+	        "urls": [
 	          "turn:104.236.154.197:3478?transport=udp",
 	          "turn:104.236.154.197:3478?transport=tcp",
 	          "turn:104.236.154.197:3479?transport=udp",
