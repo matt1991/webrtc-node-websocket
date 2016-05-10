@@ -77,8 +77,7 @@ app.get('/mobileturn', function(req, resp) {
 	    var turn_username = timestamp + ':' + query['username'];
 	    var password = hmac(key, turn_username);
 
-	    return resp.send({
-			iceServers:[
+	    return resp.send(
 				{
 		    	    username:turn_username,
 		        	password:password,
@@ -89,17 +88,9 @@ app.get('/mobileturn', function(req, resp) {
 			           "turn:104.236.154.197:3479?transport=udp",
 			           "turn:104.236.154.197:3479?transport=tcp"
 		            ]
-		   		},
-				{
-					
-      				urls: [
-       					 "stun:stun.l.google.com:19302"
-      				]
-    
-				}
-			]
+		   		}
 
-		});
+		);
 	}
 });
 
