@@ -110,24 +110,24 @@ function requestIceServers(iceServerRequestUrl, iceTransports) {
     }
   ];
 
-    resolve(iceServers);
+    ///resolve(iceServers);
 
 
-    // sendAsyncUrlRequest('POST', iceServerRequestUrl).then(function(response) {
-    //   var iceServerRequestResponse = parseJSON(response);
-    //   if (!iceServerRequestResponse) {
-    //     reject(Error('Error parsing response JSON: ' + response));
-    //     return;
-    //   }
-    //   if (iceTransports !== '') {
-    //     filterIceServersUrls(iceServerRequestResponse, iceTransports);
-    //   }
-    //   trace('Retrieved ICE server information.');
-    //   resolve(iceServerRequestResponse.iceServers);
-    // }).catch(function(error) {
-    //   reject(Error('ICE server request error: ' + error.message));
-    //   return;
-    // });
+    sendAsyncUrlRequest('GET', iceServerRequestUrl).then(function(response) {
+      var iceServerRequestResponse = parseJSON(response);
+      if (!iceServerRequestResponse) {
+        reject(Error('Error parsing response JSON: ' + response));
+        return;
+      }
+      if (iceTransports !== '') {
+        filterIceServersUrls(iceServerRequestResponse, iceTransports);
+      }
+      trace('Retrieved ICE server information.');
+      resolve(iceServerRequestResponse);
+    }).catch(function(error) {
+      reject(Error('ICE server request error: ' + error.message));
+      return;
+    });
   });
 }
 
