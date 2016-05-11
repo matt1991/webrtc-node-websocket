@@ -285,15 +285,15 @@ PeerConnectionClient.prototype.onIceCandidate_ = function(event) {
     // Eat undesired candidates.
 
     
-    if(event.candidate.candidate.indexOf("typ relay")>=0){ // if no relay address is found, assuming it means no TURN server
-        console.log("**************");
+   // if(event.candidate.candidate.indexOf("typ relay")>=0){ // if no relay address is found, assuming it means no TURN server
+     //   console.log("**************");
    // }
 
 
 
 
 
-    //if (this.filterIceCandidate_(event.candidate)) {
+    if (this.filterIceCandidate_(event.candidate)) {
       var message = {
         type: 'candidate',
         label: event.candidate.sdpMLineIndex,
