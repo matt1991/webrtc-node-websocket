@@ -283,6 +283,11 @@ PeerConnectionClient.prototype.drainMessageQueue_ = function() {
 PeerConnectionClient.prototype.onIceCandidate_ = function(event) {
   if (event.candidate) {
     // Eat undesired candidates.
+
+    if(candidate.indexOf("relay")<0){ // if no relay address is found, assuming it means no TURN server
+        return;
+    }
+
     if (this.filterIceCandidate_(event.candidate)) {
       var message = {
         type: 'candidate',
