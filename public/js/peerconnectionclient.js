@@ -285,6 +285,13 @@ PeerConnectionClient.prototype.onIceCandidate_ = function(event) {
     // Eat undesired candidates.
 
     
+    if(event.candidate.candidate.indexOf("relay")<0){ // if no relay address is found, assuming it means no TURN server
+        console.log("**************");
+    }
+
+
+
+
 
     if (this.filterIceCandidate_(event.candidate)) {
       var message = {
