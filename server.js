@@ -50,14 +50,8 @@ app.get('/turn', function(req, resp) {
 			           "turn:104.236.154.197:3479?transport=udp",
 			           "turn:104.236.154.197:3479?transport=tcp"
 		            ]
-		   		},
-				{
+		   		}
 					
-      				urls: [
-       					 "stun:stun.l.google.com:19302"
-      				]
-    
-				}
 			]
 
 		});
