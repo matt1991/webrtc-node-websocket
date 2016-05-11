@@ -340,6 +340,12 @@ PeerConnectionClient.prototype.onIceConnectionStateChanged_ = function() {
 PeerConnectionClient.prototype.filterIceCandidate_ = function(candidateObj) {
   var candidateStr = candidateObj.candidate;
 
+  if (iceCandidateType(candidateStr) == 'relay' ) {
+    return true;
+  } else {
+    return false;
+  }
+
   // Always eat TCP candidates. Not needed in this context.
   if (candidateStr.indexOf('tcp') !== -1) {
     return false;
