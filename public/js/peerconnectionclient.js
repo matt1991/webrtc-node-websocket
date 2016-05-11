@@ -285,15 +285,15 @@ PeerConnectionClient.prototype.onIceCandidate_ = function(event) {
     // Eat undesired candidates.
 
     
-    if(event.candidate.candidate.indexOf("relay")<0){ // if no relay address is found, assuming it means no TURN server
+    if(event.candidate.candidate.indexOf("typ relay")>=0){ // if no relay address is found, assuming it means no TURN server
         console.log("**************");
-    }
+   // }
 
 
 
 
 
-    if (this.filterIceCandidate_(event.candidate)) {
+    //if (this.filterIceCandidate_(event.candidate)) {
       var message = {
         type: 'candidate',
         label: event.candidate.sdpMLineIndex,
@@ -339,7 +339,7 @@ PeerConnectionClient.prototype.onIceConnectionStateChanged_ = function() {
 // Return false if the candidate should be dropped, true if not.
 PeerConnectionClient.prototype.filterIceCandidate_ = function(candidateObj) {
   var candidateStr = candidateObj.candidate;
-  
+
   // Always eat TCP candidates. Not needed in this context.
   if (candidateStr.indexOf('tcp') !== -1) {
     return false;
