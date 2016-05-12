@@ -40,17 +40,36 @@ app.get('/turn', function(req, resp) {
 
 	    return resp.send({
 			iceServers:[
-				{
-		    	    username:turn_username,
-		        	credential:password,
-		        	ttl:time_to_live,
-		        	urls: [
-			           "turn:104.236.154.197:3478?transport=udp",
-			           "turn:104.236.154.197:3478?transport=tcp",
-			           "turn:104.236.154.197:3479?transport=udp",
-			           "turn:104.236.154.197:3479?transport=tcp"
-		            ]
-		   		}
+		// 		{
+		//     	    username:turn_username,
+		//         	credential:password,
+		//         	ttl:time_to_live,
+		//         	urls: [
+		// 	           "turn:104.236.154.197:3478?transport=udp",
+		// 	           "turn:104.236.154.197:3478?transport=tcp",
+		// 	           "turn:104.236.154.197:3479?transport=udp",
+		// 	           "turn:104.236.154.197:3479?transport=tcp"
+		//             ]
+		//    		}
+		{
+  "lifetimeDuration": "43200.000s",
+  "iceServers": [
+    {
+      "urls": [
+        "turn:74.125.204.127:19305?transport=udp",
+        "turn:74.125.204.127:19305?transport=tcp",
+        "turn:74.125.23.127:19305?transport=udp"
+      ],
+      "username": "1463093448:4hYzPf2q",
+      "credential": "GOpxhhi71VfJiyr4YiEqcH93Z6s="
+    },
+    {
+      "urls": [
+        "stun:stun.l.google.com:19302"
+      ]
+    }
+  ]
+}
 					
 			]
 
