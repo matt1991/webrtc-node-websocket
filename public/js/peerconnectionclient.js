@@ -359,7 +359,7 @@ PeerConnectionClient.prototype.filterIceCandidate_ = function(candidateObj) {
   // }
 
   // If we're trying to eat non-relay candidates, do that.
-  if (this.params_.peerConnectionConfig.iceTransports === 'relay' &&
+  if (
       iceCandidateType(candidateStr) !== 'relay') {
     return false;
   }
