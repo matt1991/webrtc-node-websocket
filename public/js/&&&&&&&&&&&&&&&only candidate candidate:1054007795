@@ -1,0 +1,39 @@
+&&&&&&&&&&&&&&&only candidate candidate:1054007795 1 udp 2122260223 192.168.42.12 54143 typ host generation 0 ufrag kyKDlSIq6VLCZrCV
+apprtc.debug.js:2829 &&&&&&&&&&&&&&&only candidate candidate:2535837831 1 udp 2122194687 172.20.6.90 52035 typ host generation 0 ufrag kyKDlSIq6VLCZrCV
+apprtc.debug.js:2829 &&&&&&&&&&&&&&&only candidate candidate:90380972 1 udp 2122129151 192.168.2.1 60770 typ host generation 0 ufrag kyKDlSIq6VLCZrCV
+apprtc.debug.js:2829 &&&&&&&&&&&&&&&only candidate candidate:2225628715 1 udp 2122063615 169.254.70.202 54950 typ host generation 0 ufrag kyKDlSIq6VLCZrCV
+apprtc.debug.js:2829 &&&&&&&&&&&&&&&only candidate candidate:1048207186 1 udp 1685987071 115.160.153.18 64459 typ srflx raddr 172.20.6.90 rport 52035 generation 0 ufrag kyKDlSIq6VLCZrCV
+apprtc.debug.js:2829 &&&&&&&&&&&&&&&only candidate candidate:1048207186 1 udp 1685987071 115.160.153.18 48075 typ srflx raddr 172.20.6.90 rport 52035 generation 0 ufrag kyKDlSIq6VLCZrCV
+apprtc.debug.js:2829 &&&&&&&&&&&&&&&only candidate candidate:1048207186 1 udp 1685987071 115.160.153.18 63435 typ srflx raddr 172.20.6.90 rport 52035 generation 0 ufrag kyKDlSIq6VLCZrCV
+apprtc.debug.js:2832 ***********this is relay candidate candidate:508269811 1 udp 41820415 74.125.204.127 30854 typ relay raddr 115.160.153.18 rport 64459 generation 0 ufrag kyKDlSIq6VLCZrCV
+apprtc.debug.js:3667 61.103: C->GAE: {"type":"candidate","label":0,"id":"audio","candidate":"candidate:508269811 1 udp 41820415 74.125.204.127 30854 typ relay raddr 115.160.153.18 rport 64459 generation 0 ufrag kyKDlSIq6VLCZrCV"}
+apprtc.debug.js:2829 &&&&&&&&&&&&&&&only candidate candidate:3214600007 1 udp 1686052607 47.88.149.137 54143 typ srflx raddr 192.168.42.12 rport 54143 generation 0 ufrag kyKDlSIq6VLCZrCV
+apprtc.debug.js:2832 ***********this is relay candidate candidate:1607299544 1 udp 41819903 173.194.72.127 26544 typ relay raddr 115.160.153.18 rport 63435 generation 0 ufrag kyKDlSIq6VLCZrCV
+apprtc.debug.js:3667 61.114: C->GAE: {"type":"candidate","label":0,"id":"audio","candidate":"candidate:1607299544 1 udp 41819903 173.194.72.127 26544 typ relay raddr 115.160.153.18 rport 63435 generation 0 ufrag kyKDlSIq6VLCZrCV"}
+apprtc.debug.js:2832 ***********this is relay candidate candidate:508269811 1 udp 41885951 74.125.204.127 26734 typ relay raddr 47.88.149.137 rport 54143 generation 0 ufrag kyKDlSIq6VLCZrCV
+apprtc.debug.js:3667 61.255: C->GAE: {"type":"candidate","label":0,"id":"audio","candidate":"candidate:508269811 1 udp 41885951 74.125.204.127 26734 typ relay raddr 47.88.149.137 rport 54143 generation 0 ufrag kyKDlSIq6VLCZrCV"}
+apprtc.debug.js:2832 ***********this is relay candidate candidate:1607299544 1 udp 41885439 173.194.72.127 26949 typ relay raddr 47.88.149.137 rport 54143 generation 0 ufrag kyKDlSIq6VLCZrCV
+apprtc.debug.js:3667 61.269: C->GAE: {"type":"candidate","label":0,"id":"audio","candidate":"candidate:1607299544 1 udp 41885439 173.194.72.127 26949 typ relay raddr 47.88.149.137 rport 54143 generation 0 ufrag kyKDlSIq6VLCZrCV"}
+apprtc.debug.js:2832 ***********this is relay candidate candidate:1355311107 1 udp 25108479 74.125.204.127 27590 typ relay raddr 47.88.149.137 rport 55021 generation 0 ufrag kyKDlSIq6VLCZrCV
+apprtc.debug.js:3667 61.360: C->GAE: {"type":"candidate","label":0,"id":"audio","candidate":"candidate:1355311107 1 udp 25108479 74.125.204.127 27590 typ relay raddr 47.88.149.137 rport 55021 generation 0 ufrag kyKDlSIq6VLCZrCV"}
+
+
+
+
+
+
+
+
+
+
+56.218: ICE connection state changed to: checking
+apprtc.debug.js:2829 &&&&&&&&&&&&&&&only candidate candidate:695354074 1 udp 2122255103 2001::5ef5:79fd:2868:2522:febe:3ba5 51371 typ host generation 0 ufrag BDDU8hycHPhYCBob
+apprtc.debug.js:2829 &&&&&&&&&&&&&&&only candidate candidate:1720908603 1 udp 2122194687 192.168.8.10 51372 typ host generation 0 ufrag BDDU8hycHPhYCBob
+apprtc.debug.js:2829 &&&&&&&&&&&&&&&only candidate candidate:2424472303 1 udp 1685987071 1.65.196.90 51372 typ srflx raddr 192.168.8.10 rport 51372 generation 0 ufrag BDDU8hycHPhYCBob
+apprtc.debug.js:2832 ***********this is relay candidate candidate:78041213 1 udp 41820415 74.125.204.127 30242 typ relay raddr 1.65.196.90 rport 51372 generation 0 ufrag BDDU8hycHPhYCBob
+apprtc.debug.js:3667 56.271: C->WSS: {"type":"candidate","label":0,"id":"audio","candidate":"candidate:78041213 1 udp 41820415 74.125.204.127 30242 typ relay raddr 1.65.196.90 rport 51372 generation 0 ufrag BDDU8hycHPhYCBob"}
+apprtc.debug.js:2832 ***********this is relay candidate candidate:1762987638 1 udp 41819903 173.194.72.127 27972 typ relay raddr 1.65.196.90 rport 51372 generation 0 ufrag BDDU8hycHPhYCBob
+apprtc.debug.js:3667 56.304: C->WSS: {"type":"candidate","label":0,"id":"audio","candidate":"candidate:1762987638 1 udp 41819903 173.194.72.127 27972 typ relay raddr 1.65.196.90 rport 51372 generation 0 ufrag BDDU8hycHPhYCBob"}
+apprtc.debug.js:2832 ***********this is relay candidate candidate:78041213 1 udp 25042943 74.125.204.127 31387 typ relay raddr 1.65.196.90 rport 58472 generation 0 ufrag BDDU8hycHPhYCBob
+
+
