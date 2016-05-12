@@ -24,6 +24,7 @@ var hmac = function(key, content) {
 	return method.read();
 }
 
+var flag = true;
 
 app.get('/turn', function(req, resp) {
 
@@ -38,6 +39,48 @@ app.get('/turn', function(req, resp) {
 	    var turn_username = timestamp + ':' + query['username'];
 	    var password = hmac(key, turn_username);
 
+
+
+	if (flag) {
+		flag = false;
+		return resp.send({
+			iceServers:[
+		// 		{
+		//     	    username:turn_username,
+		//         	credential:password,
+		//         	ttl:time_to_live,
+		//         	urls: [
+		// 	           "turn:104.236.154.197:3478?transport=udp",
+		// 	           "turn:104.236.154.197:3478?transport=tcp",
+		// 	           "turn:104.236.154.197:3479?transport=udp",
+		// 	           "turn:104.236.154.197:3479?transport=tcp"
+		//             ]
+		//    		}
+		{
+  "lifetimeDuration": "43200.000s",
+  "iceServers": [
+    {
+      "urls": [
+        "turn:74.125.23.127:19305?transport=udp",
+        "turn:74.125.23.127:19305?transport=tcp",
+        "turn:173.194.72.127:19305?transport=udp"
+      ],
+      "username": "1463093697:3RDuo6i3",
+      "credential": "2ndeVawxSm/95ERuVvO40a/AQAs="
+    },
+    {
+      "urls": [
+        "stun:stun.l.google.com:19302"
+      ]
+    }
+  ]
+}
+
+					
+			]
+
+		}); 
+	}else {
 	    return resp.send({
 			iceServers:[
 		// 		{
@@ -74,6 +117,8 @@ app.get('/turn', function(req, resp) {
 			]
 
 		});
+
+}
 	}
 });
 
