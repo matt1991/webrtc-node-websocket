@@ -1,0 +1,32 @@
+&&&&&&&&&&&&&&&only candidate  candidate:1054007795 1 udp 2122260223 192.168.42.12 64186 typ host generation 0 ufrag oXF2mHlCiZHzC69J
+peerconnectionclient.js:355 &&&&&&&&&&&&&&&only candidate  candidate:2535837831 1 udp 2122194687 172.20.6.90 65155 typ host generation 0 ufrag oXF2mHlCiZHzC69J
+peerconnectionclient.js:355 &&&&&&&&&&&&&&&only candidate  candidate:90380972 1 udp 2122129151 192.168.2.1 58109 typ host generation 0 ufrag oXF2mHlCiZHzC69J
+peerconnectionclient.js:355 &&&&&&&&&&&&&&&only candidate  candidate:2225628715 1 udp 2122063615 169.254.70.202 57183 typ host generation 0 ufrag oXF2mHlCiZHzC69J
+peerconnectionclient.js:355 &&&&&&&&&&&&&&&only candidate  candidate:1048207186 1 udp 1685987071 115.160.153.18 19979 typ srflx raddr 172.20.6.90 rport 65155 generation 0 ufrag oXF2mHlCiZHzC69J
+peerconnectionclient.js:355 &&&&&&&&&&&&&&&only candidate  candidate:1048207186 1 udp 1685987071 115.160.153.18 36363 typ srflx raddr 172.20.6.90 rport 65155 generation 0 ufrag oXF2mHlCiZHzC69J
+peerconnectionclient.js:355 &&&&&&&&&&&&&&&only candidate  candidate:3214600007 1 udp 1686052607 47.88.149.137 64186 typ srflx raddr 192.168.42.12 rport 64186 generation 0 ufrag oXF2mHlCiZHzC69J
+peerconnectionclient.js:358 ***********this is relay candidate candidate:1189691460 1 udp 41820671 104.236.154.197 59307 typ relay raddr 115.160.153.18 rport 19979 generation 0 ufrag oXF2mHlCiZHzC69J
+util.js:236 23.533: C->WSS: {"type":"candidate","label":0,"id":"audio","candidate":"candidate:1189691460 1 udp 41820671 104.236.154.197 59307 typ relay raddr 115.160.153.18 rport 19979 generation 0 ufrag oXF2mHlCiZHzC69J"}
+peerconnectionclient.js:358 ***********this is relay candidate candidate:1189691460 1 udp 41820159 104.236.154.197 61529 typ relay raddr 115.160.153.18 rport 36363 generation 0 ufrag oXF2mHlCiZHzC69J
+util.js:236 23.535: C->WSS: {"type":"candidate","label":0,"id":"audio","candidate":"candidate:1189691460 1 udp 41820159 104.236.154.197 61529 typ relay raddr 115.160.153.18 rport 36363 generation 0 ufrag oXF2mHlCiZHzC69J"}
+util.js:236 23.574: WSS->C: {"cmd":"send","msg":"{\"type\":\"candidate\",\"label\":0,\"id\":\"audio\",\"candidate\":\"candidate:1644665035 1 udp 41820671 104.236.154.197 63436 typ relay raddr 1.65.196.90 rport 50715 generation 0 ufrag kwuZ6BBwtvOYb32U\"}","from":"456","to":"123"}
+util.js:236 23.575: Remote candidate added successfully.
+util.js:236 23.576: ICE connection state changed to: checking
+util.js:236 23.576: WSS->C: {"cmd":"send","msg":"{\"type\":\"candidate\",\"label\":0,\"id\":\"audio\",\"candidate\":\"candidate:1644665035 1 udp 41820159 104.236.154.197 59164 typ relay raddr 1.65.196.90 rport 50715 generation 0 ufrag kwuZ6BBwtvOYb32U\"}","from":"456","to":"123"}
+util.js:236 23.577: Remote candidate added successfully.
+peerconnectionclient.js:358 ***********this is relay candidate candidate:1189691460 1 udp 41886207 104.236.154.197 61098 typ relay raddr 47.88.149.137 rport 64186 generation 0 ufrag oXF2mHlCiZHzC69J
+util.js:236 23.664: C->WSS: {"type":"candidate","label":0,"id":"audio","candidate":"candidate:1189691460 1 udp 41886207 104.236.154.197 61098 typ relay raddr 47.88.149.137 rport 64186 generation 0 ufrag oXF2mHlCiZHzC69J"}
+peerconnectionclient.js:358 ***********this is relay candidate candidate:1189691460 1 udp 41885695 104.236.154.197 63962 typ relay raddr 47.88.149.137 rport 64186 generation 0 ufrag oXF2mHlCiZHzC69J
+util.js:236 23.682: C->WSS: {"type":"candidate","label":0,"id":"audio","candidate":"candidate:1189691460 1 udp 41885695 104.236.154.197 63962 typ relay raddr 47.88.149.137 rport 64186 generation 0 ufrag oXF2mHlCiZHzC69J"}
+util.js:236 23.813: WSS->C: {"cmd":"send","msg":"{\"type\":\"candidate\",\"label\":0,\"id\":\"audio\",\"candidate\":\"candidate:1644665035 1 udp 25043199 104.236.154.197 62571 typ relay raddr 1.65.196.90 rport 13491 generation 0 ufrag kwuZ6BBwtvOYb32U\"}","from":"456","to":"123"}
+util.js:236 23.814: Remote candidate added successfully.
+util.js:236 23.814: WSS->C: {"cmd":"send","msg":"{\"type\":\"candidate\",\"label\":0,\"id\":\"audio\",\"candidate\":\"candidate:1644665035 1 udp 25042687 104.236.154.197 60913 typ relay raddr 1.65.196.90 rport 58576 generation 0 ufrag kwuZ6BBwtvOYb32U\"}","from":"456","to":"123"}
+util.js:236 23.815: Remote candidate added successfully.
+peerconnectionclient.js:358 ***********this is relay candidate candidate:141212852 1 udp 25108223 104.236.154.197 62733 typ relay raddr 47.88.149.137 rport 55086 generation 0 ufrag oXF2mHlCiZHzC69J
+util.js:236 23.852: C->WSS: {"type":"candidate","label":0,"id":"audio","candidate":"candidate:141212852 1 udp 25108223 104.236.154.197 62733 typ relay raddr 47.88.149.137 rport 55086 generation 0 ufrag oXF2mHlCiZHzC69J"}
+peerconnectionclient.js:358 ***********this is relay candidate candidate:141212852 1 udp 25108735 104.236.154.197 62265 typ relay raddr 47.88.149.137 rport 55085 generation 0 ufrag oXF2mHlCiZHzC69J
+util.js:236 23.925: C->WSS: {"type":"candidate","label":0,"id":"audio","candidate":"candidate:141212852 1 udp 25108735 104.236.154.197 62265 typ relay raddr 47.88.149.137 rport 55085 generation 0 ufrag oXF2mHlCiZHzC69J"}
+
+
+
+
