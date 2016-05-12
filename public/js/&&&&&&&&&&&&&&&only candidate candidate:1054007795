@@ -24,16 +24,53 @@ apprtc.debug.js:3667 61.360: C->GAE: {"type":"candidate","label":0,"id":"audio",
 
 
 
+2.573: Got access to local media with mediaConstraints:
+  '{"audio":true,"video":{"optional":[{"minWidth":"1280"},{"minHeight":"720"}],"mandatory":{}}}'
+util.js:236 2.576: User has granted access to local media.
+util.js:236 2.577: Attaching local stream.
+adapter.js:1910 DEPRECATED, attachMediaStream will soon be removed.
+util.js:236 9.936: Opening signaling channel.
+util.js:236 10.914: Signaling channel opened.
+util.js:236 10.915: Registering signaling channel.
+util.js:236 10.916: Signaling channel registered.
+util.js:236 11.083: WSS->C: {"register":"register","clientId":"456"}
+util.js:236 11.083: register successfully
+util.js:236 16.547: WSS->C: {"from":"123","to":"456","type":"accept"}
+util.js:236 16.549: Starting signaling.
+util.js:236 16.554: ECDSA certificate generated successfully.
+util.js:236 16.555: Creating RTCPeerConnnection with:
+  config: '{"rtcpMuxPolicy":"require","bundlePolicy":"max-bundle","iceServers":[{"username":"1463026083:464646870","credential":"0H91xmvEL1HPtbRlS2WOt6+pr+c=","ttl":600,"urls":["turn:104.236.154.197:3478?transport=udp","turn:104.236.154.197:3478?transport=tcp","turn:104.236.154.197:3479?transport=udp","turn:104.236.154.197:3479?transport=tcp"]}],"certificates":[{}]}';
+  constraints: '{"optional":[]}'.
+adapter.js:1910 PeerConnection
+util.js:236 16.558: Created PeerConnectionClient
+util.js:236 16.559: Adding local stream.
+util.js:236 16.560: Sending offer to peer, with constraints: 
+'{"offerToReceiveAudio":1,"offerToReceiveVideo":1,"voiceActivityDetection":false}'.
+util.js:236 16.564: No preference on audio receive codec.
+util.js:236 16.565: Prefer video receive codec: VP9
+util.js:236 16.569: C->WSS: {"sdp":"v=0\r\no=- 972274223782511249 2 IN IP4 127.0.0.1\r\ns=-\r\nt=0 0\r\na=group:BUNDLE audio video\r\na=msid-semantic: WMS hW96PlkCmPgwgSApSNgb2ybATBfEgz4iGmh9\r\nm=audio 9 UDP/TLS/RTP/SAVPF 111 103 104 9 0 8 126\r\nc=IN IP4 0.0.0.0\r\na=rtcp:9 IN IP4 0.0.0.0\r\na=ice-ufrag:kwuZ6BBwtvOYb32U\r\na=ice-pwd:Vw2UQ55vrZ9CXZHdbE4vPfXe\r\na=fingerprint:sha-256 F2:CD:95:AC:86:C8:40:FA:70:CC:42:8A:E8:4A:E1:82:A2:77:E0:63:04:92:B3:E6:E9:5E:30:68:61:AC:25:52\r\na=setup:actpass\r\na=mid:audio\r\na=extmap:1 urn:ietf:params:rtp-hdrext:ssrc-audio-level\r\na=extmap:3 http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time\r\na=sendrecv\r\na=rtcp-mux\r\na=rtpmap:111 opus/48000/2\r\na=fmtp:111 minptime=10; useinbandfec=1\r\na=rtpmap:103 ISAC/16000\r\na=rtpmap:104 ISAC/32000\r\na=rtpmap:9 G722/8000\r\na=rtpmap:0 PCMU/8000\r\na=rtpmap:8 PCMA/8000\r\na=rtpmap:126 telephone-event/8000\r\na=maxptime:60\r\na=ssrc:2024977195 cname:jrbZrtBDEZ26Q3Ob\r\na=ssrc:2024977195 msid:hW96PlkCmPgwgSApSNgb2ybATBfEgz4iGmh9 49b24f7f-fb83-4208-9a6c-9e39bb8ff7da\r\na=ssrc:2024977195 mslabel:hW96PlkCmPgwgSApSNgb2ybATBfEgz4iGmh9\r\na=ssrc:2024977195 label:49b24f7f-fb83-4208-9a6c-9e39bb8ff7da\r\nm=video 9 UDP/TLS/RTP/SAVPF 101 100 116 117 96\r\nc=IN IP4 0.0.0.0\r\na=rtcp:9 IN IP4 0.0.0.0\r\na=ice-ufrag:kwuZ6BBwtvOYb32U\r\na=ice-pwd:Vw2UQ55vrZ9CXZHdbE4vPfXe\r\na=fingerprint:sha-256 F2:CD:95:AC:86:C8:40:FA:70:CC:42:8A:E8:4A:E1:82:A2:77:E0:63:04:92:B3:E6:E9:5E:30:68:61:AC:25:52\r\na=setup:actpass\r\na=mid:video\r\na=extmap:2 urn:ietf:params:rtp-hdrext:toffset\r\na=extmap:3 http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time\r\na=extmap:4 urn:3gpp:video-orientation\r\na=sendrecv\r\na=rtcp-mux\r\na=rtpmap:100 VP8/90000\r\na=rtcp-fb:100 ccm fir\r\na=rtcp-fb:100 nack\r\na=rtcp-fb:100 nack pli\r\na=rtcp-fb:100 goog-remb\r\na=rtcp-fb:100 transport-cc\r\na=rtpmap:101 VP9/90000\r\na=rtcp-fb:101 ccm fir\r\na=rtcp-fb:101 nack\r\na=rtcp-fb:101 nack pli\r\na=rtcp-fb:101 goog-remb\r\na=rtcp-fb:101 transport-cc\r\na=rtpmap:116 red/90000\r\na=rtpmap:117 ulpfec/90000\r\na=rtpmap:96 rtx/90000\r\na=fmtp:96 apt=100\r\na=ssrc-group:FID 211986471 965141761\r\na=ssrc:211986471 cname:jrbZrtBDEZ26Q3Ob\r\na=ssrc:211986471 msid:hW96PlkCmPgwgSApSNgb2ybATBfEgz4iGmh9 9e20bb9b-ded4-443a-b803-11be632162b2\r\na=ssrc:211986471 mslabel:hW96PlkCmPgwgSApSNgb2ybATBfEgz4iGmh9\r\na=ssrc:211986471 label:9e20bb9b-ded4-443a-b803-11be632162b2\r\na=ssrc:965141761 cname:jrbZrtBDEZ26Q3Ob\r\na=ssrc:965141761 msid:hW96PlkCmPgwgSApSNgb2ybATBfEgz4iGmh9 9e20bb9b-ded4-443a-b803-11be632162b2\r\na=ssrc:965141761 mslabel:hW96PlkCmPgwgSApSNgb2ybATBfEgz4iGmh9\r\na=ssrc:965141761 label:9e20bb9b-ded4-443a-b803-11be632162b2\r\n","type":"offer"}
+util.js:236 16.572: Signaling state changed to: have-local-offer
+util.js:236 16.574: Set session description success.
+peerconnectionclient.js:355 &&&&&&&&&&&&&&&only candidate  candidate:695354074 1 udp 2122255103 2001::5ef5:79fd:2868:2522:febe:3ba5 50714 typ host generation 0 ufrag kwuZ6BBwtvOYb32U
+peerconnectionclient.js:355 &&&&&&&&&&&&&&&only candidate  candidate:1720908603 1 udp 2122194687 192.168.8.10 50715 typ host generation 0 ufrag kwuZ6BBwtvOYb32U
+peerconnectionclient.js:355 &&&&&&&&&&&&&&&only candidate  candidate:2424472303 1 udp 1685987071 1.65.196.90 50715 typ srflx raddr 192.168.8.10 rport 50715 generation 0 ufrag kwuZ6BBwtvOYb32U
+peerconnectionclient.js:358 ***********this is relay candidate candidate:1644665035 1 udp 41820671 104.236.154.197 63436 typ relay raddr 1.65.196.90 rport 50715 generation 0 ufrag kwuZ6BBwtvOYb32U
+util.js:236 16.957: C->WSS: {"type":"candidate","label":0,"id":"audio","candidate":"candidate:1644665035 1 udp 41820671 104.236.154.197 63436 typ relay raddr 1.65.196.90 rport 50715 generation 0 ufrag kwuZ6BBwtvOYb32U"}
+util.js:236 16.990: WSS->C: {"cmd":"send","msg":"{\"sdp\":\"v=0\\r\\no=- 8278385592421081605 2 IN IP4 127.0.0.1\\r\\ns=-\\r\\nt=0 0\\r\\na=group:BUNDLE audio video\\r\\na=msid-semantic: WMS pJ6e9AYl7bZoJ1Q4kLSLcvm4z1JxXWkerNzH\\r\\nm=audio 9 UDP/TLS/RTP/SAVPF 111 103 104 9 0 8 126\\r\\nc=IN IP4 0.0.0.0\\r\\na=rtcp:9 IN IP4 0.0.0.0\\r\\na=ice-ufrag:oXF2mHlCiZHzC69J\\r\\na=ice-pwd:tYk9kg+rp4mECgItALw3ZZYR\\r\\na=fingerprint:sha-256 3F:01:C7:C8:0F:C2:01:36:A3:40:2E:54:68:EB:FE:D4:F2:4F:3B:13:EF:D5:F0:84:0C:88:CE:03:B8:B4:A0:9B\\r\\na=setup:active\\r\\na=mid:audio\\r\\na=extmap:1 urn:ietf:params:rtp-hdrext:ssrc-audio-level\\r\\na=extmap:3 http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time\\r\\na=sendrecv\\r\\na=rtcp-mux\\r\\na=rtpmap:111 opus/48000/2\\r\\na=fmtp:111 minptime=10; useinbandfec=1\\r\\na=rtpmap:103 ISAC/16000\\r\\na=rtpmap:104 ISAC/32000\\r\\na=rtpmap:9 G722/8000\\r\\na=rtpmap:0 PCMU/8000\\r\\na=rtpmap:8 PCMA/8000\\r\\na=rtpmap:126 telephone-event/8000\\r\\na=maxptime:60\\r\\na=ssrc:3720579875 cname:Ba/WNmFUPO/B+nEC\\r\\na=ssrc:3720579875 msid:pJ6e9AYl7bZoJ1Q4kLSLcvm4z1JxXWkerNzH 733b83b3-6c0b-4d9b-8940-b50b64d9987c\\r\\na=ssrc:3720579875 mslabel:pJ6e9AYl7bZoJ1Q4kLSLcvm4z1JxXWkerNzH\\r\\na=ssrc:3720579875 label:733b83b3-6c0b-4d9b-8940-b50b64d9987c\\r\\nm=video 9 UDP/TLS/RTP/SAVPF 101 100 116 117 96\\r\\nc=IN IP4 0.0.0.0\\r\\na=rtcp:9 IN IP4 0.0.0.0\\r\\na=ice-ufrag:oXF2mHlCiZHzC69J\\r\\na=ice-pwd:tYk9kg+rp4mECgItALw3ZZYR\\r\\na=fingerprint:sha-256 3F:01:C7:C8:0F:C2:01:36:A3:40:2E:54:68:EB:FE:D4:F2:4F:3B:13:EF:D5:F0:84:0C:88:CE:03:B8:B4:A0:9B\\r\\na=setup:active\\r\\na=mid:video\\r\\na=extmap:2 urn:ietf:params:rtp-hdrext:toffset\\r\\na=extmap:3 http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time\\r\\na=extmap:4 urn:3gpp:video-orientation\\r\\na=sendrecv\\r\\na=rtcp-mux\\r\\na=rtpmap:101 VP9/90000\\r\\na=rtcp-fb:101 ccm fir\\r\\na=rtcp-fb:101 nack\\r\\na=rtcp-fb:101 nack pli\\r\\na=rtcp-fb:101 goog-remb\\r\\na=rtcp-fb:101 transport-cc\\r\\na=rtpmap:100 VP8/90000\\r\\na=rtcp-fb:100 ccm fir\\r\\na=rtcp-fb:100 nack\\r\\na=rtcp-fb:100 nack pli\\r\\na=rtcp-fb:100 goog-remb\\r\\na=rtcp-fb:100 transport-cc\\r\\na=rtpmap:116 red/90000\\r\\na=rtpmap:117 ulpfec/90000\\r\\na=rtpmap:96 rtx/90000\\r\\na=fmtp:96 apt=100\\r\\na=ssrc-group:FID 1688305487 1823314731\\r\\na=ssrc:1688305487 cname:Ba/WNmFUPO/B+nEC\\r\\na=ssrc:1688305487 msid:pJ6e9AYl7bZoJ1Q4kLSLcvm4z1JxXWkerNzH 0579cb63-5bd6-486b-957c-cda6e8a46066\\r\\na=ssrc:1688305487 mslabel:pJ6e9AYl7bZoJ1Q4kLSLcvm4z1JxXWkerNzH\\r\\na=ssrc:1688305487 label:0579cb63-5bd6-486b-957c-cda6e8a46066\\r\\na=ssrc:1823314731 cname:Ba/WNmFUPO/B+nEC\\r\\na=ssrc:1823314731 msid:pJ6e9AYl7bZoJ1Q4kLSLcvm4z1JxXWkerNzH 0579cb63-5bd6-486b-957c-cda6e8a46066\\r\\na=ssrc:1823314731 mslabel:pJ6e9AYl7bZoJ1Q4kLSLcvm4z1JxXWkerNzH\\r\\na=ssrc:1823314731 label:0579cb63-5bd6-486b-957c-cda6e8a46066\\r\\n\",\"type\":\"answer\"}","from":"123","to":"456"}
+util.js:236 16.993: No preference on audio send codec.
+util.js:236 16.993: No preference on video send codec.
+peerconnectionclient.js:358 ***********this is relay candidate candidate:1644665035 1 udp 41820159 104.236.154.197 59164 typ relay raddr 1.65.196.90 rport 50715 generation 0 ufrag kwuZ6BBwtvOYb32U
+util.js:236 16.996: C->WSS: {"type":"candidate","label":0,"id":"audio","candidate":"candidate:1644665035 1 udp 41820159 104.236.154.197 59164 typ relay raddr 1.65.196.90 rport 50715 generation 0 ufrag kwuZ6BBwtvOYb32U"}
+util.js:236 16.997: Signaling state changed to: stable
+util.js:236 17.037: ICE connection state changed to: checking
+util.js:236 17.038: Set remote session description success.
+util.js:236 17.038: Waiting for remote video.
+util.js:236 17.038: Remote stream added.
+adapter.js:1910 DEPRECATED, attachMediaStream will soon be removed.
+peerconnectionclient.js:358 ***********this is relay candidate candidate:1644665035 1 udp 25043199 104.236.154.197 62571 typ relay raddr 1.65.196.90 rport 13491 generation 0 ufrag kwuZ6BBwtvOYb32U
+util.js:236 17.241: C->WSS: {"type":"candidate","label":0,"id":"audio","candidate":"candidate:1644665035 1 udp 25043199 104.236.154.197 62571 typ relay raddr 1.65.196.90 rport 13491 generation 0 ufrag kwuZ6BBwtvOYb32U"}
+peerconnectionclient.js:358 ***********this is relay candidate candidate:1644665035 1 udp 25042687 104.236.154.197 60913 typ relay raddr 1.65.196.90 rport 58576 generation 0 ufrag kwuZ6BBwtvOYb32U
 
 
-56.218: ICE connection state changed to: checking
-apprtc.debug.js:2829 &&&&&&&&&&&&&&&only candidate candidate:695354074 1 udp 2122255103 2001::5ef5:79fd:2868:2522:febe:3ba5 51371 typ host generation 0 ufrag BDDU8hycHPhYCBob
-apprtc.debug.js:2829 &&&&&&&&&&&&&&&only candidate candidate:1720908603 1 udp 2122194687 192.168.8.10 51372 typ host generation 0 ufrag BDDU8hycHPhYCBob
-apprtc.debug.js:2829 &&&&&&&&&&&&&&&only candidate candidate:2424472303 1 udp 1685987071 1.65.196.90 51372 typ srflx raddr 192.168.8.10 rport 51372 generation 0 ufrag BDDU8hycHPhYCBob
-apprtc.debug.js:2832 ***********this is relay candidate candidate:78041213 1 udp 41820415 74.125.204.127 30242 typ relay raddr 1.65.196.90 rport 51372 generation 0 ufrag BDDU8hycHPhYCBob
-apprtc.debug.js:3667 56.271: C->WSS: {"type":"candidate","label":0,"id":"audio","candidate":"candidate:78041213 1 udp 41820415 74.125.204.127 30242 typ relay raddr 1.65.196.90 rport 51372 generation 0 ufrag BDDU8hycHPhYCBob"}
-apprtc.debug.js:2832 ***********this is relay candidate candidate:1762987638 1 udp 41819903 173.194.72.127 27972 typ relay raddr 1.65.196.90 rport 51372 generation 0 ufrag BDDU8hycHPhYCBob
-apprtc.debug.js:3667 56.304: C->WSS: {"type":"candidate","label":0,"id":"audio","candidate":"candidate:1762987638 1 udp 41819903 173.194.72.127 27972 typ relay raddr 1.65.196.90 rport 51372 generation 0 ufrag BDDU8hycHPhYCBob"}
-apprtc.debug.js:2832 ***********this is relay candidate candidate:78041213 1 udp 25042943 74.125.204.127 31387 typ relay raddr 1.65.196.90 rport 58472 generation 0 ufrag BDDU8hycHPhYCBob
 
 

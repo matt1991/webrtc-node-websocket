@@ -29,7 +29,8 @@ app.get('/turn', function(req, resp) {
 
 
 	var query = req.query;
-	var key = '4080218913';
+	//var key = '4080218913';
+	var key = 'diveinedu';
 	if (!query['username']) {
 	    return resp.send({'error':'AppError', 'message':'Must provide username.'});
 	} else {
@@ -45,10 +46,12 @@ app.get('/turn', function(req, resp) {
 		        	credential:password,
 		        	ttl:time_to_live,
 		        	urls: [
-			           "turn:104.236.154.197:3478?transport=udp",
-			           "turn:104.236.154.197:3478?transport=tcp",
-			           "turn:104.236.154.197:3479?transport=udp",
-			           "turn:104.236.154.197:3479?transport=tcp"
+					"turn:stun.diveinedu.com:4478?transport=tcp",
+                	"stun:stun.diveinedu.com:4478"
+			//            "turn:104.236.154.197:3478?transport=udp",
+			//            "turn:104.236.154.197:3478?transport=tcp",
+			//            "turn:104.236.154.197:3479?transport=udp",
+			//            "turn:104.236.154.197:3479?transport=tcp"
 		            ]
 		   		}
 					
