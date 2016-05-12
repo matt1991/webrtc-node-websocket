@@ -353,14 +353,16 @@ PeerConnectionClient.prototype.filterIceCandidate_ = function(candidateObj) {
   }
 
   if (iceCandidateType(candidateStr) !== 'relay') {
-    console.log("not relay**************", candidate);
+    console.log("not relay**************", candidateStr);
     return false;
-  };
+  } else {
+    console.log("relay normal", candidateStr);
+  }
 
   // If we're trying to eat non-relay candidates, do that.
   if (this.params_.peerConnectionConfig.iceTransports === 'relay' &&
       iceCandidateType(candidateStr) !== 'relay') {
-    console.log("relay**************", candidate);
+    console.log("relay**************", candidateStr);
     return false;
   }
 
