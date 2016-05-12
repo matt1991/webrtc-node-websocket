@@ -66,11 +66,6 @@ app.get('/turn', function(req, resp) {
       ],
       "username": "1463093697:3RDuo6i3",
       "credential": "2ndeVawxSm/95ERuVvO40a/AQAs="
-    },
-    {
-      "urls": [
-        "stun:stun.l.google.com:19302"
-      ]
     }
   ]
 }
@@ -102,11 +97,6 @@ app.get('/turn', function(req, resp) {
       ],
       "username": "1463093448:4hYzPf2q",
       "credential": "GOpxhhi71VfJiyr4YiEqcH93Z6s="
-    },
-    {
-      "urls": [
-        "stun:stun.l.google.com:19302"
-      ]
     }
   ]
 }
