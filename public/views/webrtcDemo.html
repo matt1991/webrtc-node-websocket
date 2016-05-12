@@ -113,7 +113,7 @@
       mediaConstraints: {"audio": true, "video": {"optional": [{"minWidth": "1280"}, {"minHeight": "720"}], "mandatory": {}}},
       //mediaConstraints: {"audio": false, "video": false},
       offerOptions: {},
-      peerConnectionConfig: {"rtcpMuxPolicy": "require", "bundlePolicy": "max-bundle", "iceServers": []},
+      peerConnectionConfig: {"rtcpMuxPolicy": "require", "bundlePolicy": "max-bundle", "iceServers": [], "iceTransports":"relay"},
       peerConnectionConstraints: {"optional": []},
       iceServerRequestUrl: 'https://104.236.154.197:8089/turn?username=464646870&key=4080218913',
 //turnRequestUrl: 'https://computeengineondemand.appspot.com/turn?username=464646870&key=4080218913',
