@@ -351,12 +351,12 @@ PeerConnectionClient.prototype.filterIceCandidate_ = function(candidateObj) {
     return false;
   }
 
-  if (iceCandidateType(candidateStr) !== 'relay') {
-    console.log("&&&&&&&&&&&&&&&only candidate ", candidateStr);
-    return false;
-  } else {
-    console.log("***********this is relay candidate", candidateStr);
-  }
+  // if (iceCandidateType(candidateStr) !== 'relay') {
+  //   console.log("&&&&&&&&&&&&&&&only candidate ", candidateStr);
+  //   return false;
+  // } else {
+  //   console.log("***********this is relay candidate", candidateStr);
+  // }
 
   // If we're trying to eat non-relay candidates, do that.
   if (this.params_.peerConnectionConfig.iceTransports === 'relay' &&
