@@ -348,21 +348,19 @@ PeerConnectionClient.prototype.filterIceCandidate_ = function(candidateObj) {
 
   // Always eat TCP candidates. Not needed in this context.
   if (candidateStr.indexOf('tcp') !== -1) {
-    console.log("has tcp&&&&&&&&&&&&&&", candidateStr);
     return false;
   }
 
   if (iceCandidateType(candidateStr) !== 'relay') {
-    console.log("not relay**************", candidateStr);
+    console.log("&&&&&&&&&&&&&&&only candidate ", candidateStr);
     return false;
   } else {
-    console.log("relay normal", candidateStr);
+    console.log("***********this is relay candidate", candidateStr);
   }
 
   // If we're trying to eat non-relay candidates, do that.
   if (this.params_.peerConnectionConfig.iceTransports === 'relay' &&
       iceCandidateType(candidateStr) !== 'relay') {
-    console.log("relay**************", candidateStr);
     return false;
   }
 
