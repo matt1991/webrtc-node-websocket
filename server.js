@@ -43,8 +43,7 @@ app.get('/turn', function(req, resp) {
 
 	if (flag) {
 		flag = false;
-		return resp.send({
-			iceServers:[
+		return resp.send(
 		// 		{
 		//     	    username:turn_username,
 		//         	credential:password,
@@ -77,12 +76,10 @@ app.get('/turn', function(req, resp) {
 }
 
 					
-			]
 
-		}); 
+		); 
 	}else {
-	    return resp.send({
-			iceServers:[
+	    return resp.send(
 		// 		{
 		//     	    username:turn_username,
 		//         	credential:password,
@@ -114,9 +111,9 @@ app.get('/turn', function(req, resp) {
   ]
 }
 					
-			]
+			
 
-		});
+		);
 
 }
 	}
