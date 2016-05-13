@@ -176,6 +176,7 @@ var chromeShim = {
       // Translate iceTransportPolicy to iceTransports,
       // see https://code.google.com/p/webrtc/issues/detail?id=4869
       logging('PeerConnection');
+      console.log(pcConfig);
       if (pcConfig && pcConfig.iceTransportPolicy) {
         pcConfig.iceTransports = pcConfig.iceTransportPolicy;
       }

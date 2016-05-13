@@ -39,6 +39,31 @@ app.get('/turn', function(req, resp) {
 	    var turn_username = timestamp + ':' + query['username'];
 	    var password = hmac(key, turn_username);
 
+		return resp.send({
+			
+			"iceServers": [
+			    {
+			      "urls": [
+		 	           "turn:104.236.154.197:3478?transport=udp",
+		 	           "turn:104.236.154.197:3478?transport=tcp",
+		 	           "turn:104.236.154.197:3479?transport=udp",
+		 	           "turn:104.236.154.197:3479?transport=tcp"
+			      ],
+			      username:turn_username,
+		         	credential:password,
+			    }
+			  ]
+		//     	    username:turn_username,
+		//         	credential:password,
+		//         	ttl:time_to_live,
+		//         	urls: [
+		// 	           "turn:104.236.154.197:3478?transport=udp",
+		// 	           "turn:104.236.154.197:3478?transport=tcp",
+		// 	           "turn:104.236.154.197:3479?transport=udp",
+		// 	           "turn:104.236.154.197:3479?transport=tcp"
+		//             ]
+		//    		}
+		});
 
 
 	if (flag) {
