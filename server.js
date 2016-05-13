@@ -60,12 +60,12 @@ app.get('/turn', function(req, resp) {
   "iceServers": [
     {
       "urls": [
-        "turn:74.125.23.127:19305?transport=udp",
-        "turn:74.125.23.127:19305?transport=tcp",
+        "turn:173.194.72.127:19305?transport=udp",
+        "turn:173.194.72.127:19305?transport=tcp",
         "turn:173.194.72.127:19305?transport=udp"
       ],
-      "username": "1463093697:3RDuo6i3",
-      "credential": "2ndeVawxSm/95ERuVvO40a/AQAs="
+      "username": "1463146405:QhvIgP6F",
+      "credential": "hUY8k+gFRugfBmH1TzdaioZYplw="
     }
   ]
 }
@@ -91,12 +91,12 @@ app.get('/turn', function(req, resp) {
   "iceServers": [
     {
       "urls": [
-        "turn:74.125.204.127:19305?transport=udp",
-        "turn:74.125.204.127:19305?transport=tcp",
-        "turn:74.125.23.127:19305?transport=udp"
+        "turn:74.125.23.127:19305?transport=udp",
+        "turn:74.125.23.127:19305?transport=tcp",
+        "turn:173.194.72.127:19305?transport=udp"
       ],
-      "username": "1463093448:4hYzPf2q",
-      "credential": "GOpxhhi71VfJiyr4YiEqcH93Z6s="
+      "username": "1463146438:56FlmRZH",
+      "credential": "DujZx5NIkeoLPdBRaSJ/tFPOMBY="
     }
   ]
 }
